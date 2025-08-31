@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aupathic, LLC - Technology Consulting & Development</title>
+    <title>Aupathic, LLC - Technology Consulting & Development Services</title>
     <link rel="stylesheet" href="css/style.css?_cb=1" />
     <meta
       name="description"
@@ -50,5 +50,19 @@
         >
       </div>
     </div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration)
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError)
+            })
+        })
+      }
+    </script>
   </body>
 </html>
