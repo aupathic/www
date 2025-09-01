@@ -13,3 +13,8 @@ also offer expertise in data science, and ML/AI technologies.
 This site should be minimal but elegant using only vanilla technologies - i.e.
 no additional JS/CSS frameworks. Within that constraint we should follow best
 practices and coding standards.
+
+## Style Guidelines
+
+The site is going for a modern, clean, and minimalist design. It should feel
+like a cross between a business card and marketing site.k:w

@@ -39,6 +39,17 @@
   </head>
 
   <body>
+    <div class="theme-toggle">
+      <button class="theme-toggle-option" data-theme="system" title="System preference">
+        🖥️
+      </button>
+      <button class="theme-toggle-option" data-theme="light" title="Light mode">
+        ☀️
+      </button>
+      <button class="theme-toggle-option" data-theme="dark" title="Dark mode">
+        🌙
+      </button>
+    </div>
     <div class="hero-card">
       <h1>Aupathic, LLC</h1>
       <p class="hero-tagline">
@@ -71,6 +82,7 @@
         >
       </div>
     </div>
+    <script src="js/theme.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

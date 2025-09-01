@@ -11,9 +11,36 @@
   --color-card-shadow: rgba(0, 0, 0, 0.05);
 }
 
+/* Theme overrides for manual selection */
+[data-theme="light"] {
+  /* Light mode colors (forced) */
+  --color-body-bg: #f8fafc;
+  --color-card-bg: #ffffff;
+  --color-text: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-border: #e2e8f0;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-card-shadow: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  /* Dark mode colors (forced) */
+  --color-body-bg: #0f172a;
+  --color-card-bg: #1e293b;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-primary: #60a5fa;
+  --color-primary-hover: #3b82f6;
+  --color-border: #334155;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-card-shadow: rgba(0, 0, 0, 0.2);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
-    /* Dark mode colors */
+  :root:not([data-theme]) {
+    /* Dark mode colors (system preference only) */
     --color-body-bg: #0f172a;
     --color-card-bg: #1e293b;
     --color-text: #f1f5f9;
@@ -189,5 +216,74 @@ a:hover {
 @media (min-width: 1024px) {
   .hero-card {
     margin: 6rem auto;
+  }
+}
+
+/* Theme Toggle Component */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 3px;
+  box-shadow: 0 1px 3px var(--color-card-shadow);
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.theme-toggle-option {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.theme-toggle-option:hover {
+  background: var(--color-border);
+}
+
+.theme-toggle-option.active {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+.theme-toggle-option.active:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Toggle responsive adjustments */
+@media (max-width: 767px) {
+  .theme-toggle {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    transform: none;
+    border: none;
+    box-shadow: none;
+    padding: 2px;
+  }
+  
+  .theme-toggle-option {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 11px;
+  }
+  
+  .hero-card {
+    position: relative;
   }
 }
