@@ -1,16 +1,15 @@
-const CACHE_NAME = 'aupathic-v1'
+const CACHE_NAME = 'aupathic-v2'
 const urlsToCache = [
   '/',
   '/index.html',
-  '/css/style.css',
-  '/js/theme.js',
+  '/static/css/style.css',
+  '/static/js/theme.js',
   '/site.webmanifest',
-  '/img/favicon.ico',
-  '/img/favicon-16x16.png',
-  '/img/favicon-32x32.png',
-  '/img/apple-touch-icon.png',
-  '/img/android-chrome-192x192.png',
-  '/img/android-chrome-512x512.png',
+  '/static/img/favicon-16x16.png',
+  '/static/img/favicon-32x32.png',
+  '/static/img/apple-touch-icon.png',
+  '/static/img/android-chrome-192x192.png',
+  '/static/img/android-chrome-512x512.png',
   'https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap',
   'https://fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58m-wi40.woff2',
 ]
