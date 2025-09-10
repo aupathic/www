@@ -17,4 +17,4 @@ practices and coding standards.
 ## Style Guidelines
 
 The site is going for a modern, clean, and minimalist design. It should feel
-like a cross between a business card and marketing site.k:w
+like a cross between a business card and marketing site.
