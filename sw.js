@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aupathic-v3'
+const CACHE_NAME = 'aupathic-v4'
 const urlsToCache = [
   '/',
   '/index.html',
