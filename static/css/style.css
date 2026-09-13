@@ -120,7 +120,7 @@ a:hover {
   gap: 1.5rem;
   width: 100%;
   max-width: 600px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .service-item {
@@ -138,8 +138,7 @@ a:hover {
 }
 
 .contact-section {
-  padding-top: 1rem;
-  border-top: 1px solid var(--color-border);
+  padding-top: 0;
 }
 
 .contact-link {
@@ -156,6 +155,83 @@ a:hover {
   background-color: var(--color-primary);
   color: white;
   transform: translateY(-1px);
+}
+
+/* Rotating project prompts */
+.prompts {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  padding: 1.75rem 1rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.prompts-lead {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.prompt-text {
+  margin: 0;
+  min-height: calc(1.5em * 2);
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.prompt-text::before {
+  content: "\201C";
+  color: var(--color-text-secondary);
+}
+
+.prompt-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  margin-left: 2px;
+  vertical-align: -0.15em;
+  background-color: var(--color-primary);
+  animation: prompt-blink 1s steps(1, end) infinite;
+}
+
+@keyframes prompt-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Static fallback without JS: show the list, hide the typing line */
+.prompt-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-style: italic;
+  color: var(--color-text-secondary);
+}
+
+.prompt-list li {
+  margin-bottom: 0.5rem;
+}
+
+.js .prompt-list {
+  display: none;
+}
+
+.no-js .prompt-text {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .prompt-cursor {
+    animation: none;
+  }
 }
 
 @media (min-width: 640px) {
