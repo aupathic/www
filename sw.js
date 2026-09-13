@@ -1,10 +1,12 @@
-const CACHE_NAME = 'aupathic-v6'
+const CACHE_NAME = 'aupathic-v7'
 const urlsToCache = [
   '/',
   '/index.html',
   '/static/css/style.css',
   '/static/js/prompts.js',
   '/site.webmanifest',
+  '/static/img/favicon.ico',
+  '/static/img/logo.svg',
   '/static/img/favicon-16x16.png',
   '/static/img/favicon-32x32.png',
   '/static/img/apple-touch-icon.png',
