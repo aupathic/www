@@ -1,9 +1,8 @@
-const CACHE_NAME = 'aupathic-v4'
+const CACHE_NAME = 'aupathic-v5'
 const urlsToCache = [
   '/',
   '/index.html',
   '/static/css/style.css',
-  '/static/js/theme.js',
   '/site.webmanifest',
   '/static/img/favicon-16x16.png',
   '/static/img/favicon-32x32.png',
